@@ -50,7 +50,7 @@
   }
 
   (async () => {
-    html = getTreeForPath();
+    htmlString = await getTreeForPath();
     document.getElementsByTagName("body")[0].innerHTML = htmlString;
   })();
 </script>
