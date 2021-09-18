@@ -4,7 +4,7 @@
     <title>IACS Web Portfolio Documents</title>
   </head>
   <body>
-    <p>Wait one sec...</p>      
+    <p>Wait one sec...</p>
   </body>
 </html>
 <script>
@@ -18,7 +18,7 @@
     for (let file of data) {
       htmlString += `<li><a href="${file.path}">${file.name}</a>`;
       if (file.type == "dir") {
-        subString = getTreeForPath(file.path);
+        subString = await getTreeForPath(file.path);
         htmlString += subString;
       }
       htmlString += "</li>";
