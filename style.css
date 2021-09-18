@@ -5,3 +5,37 @@
   line-height: 1.2;
   max-width: 12em;
 }
+
+.standard header,
+.standard ul {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.standard h3,
+.standard h4 {
+  margin: 0;
+}
+
+.standard .code {
+  font-family: monospace;
+  color: #444;
+  font-weight: bold;
+}
+
+.standard .strand {
+  opacity: 0.6;
+  font-weight: normal;
+  text-align: right;
+  font-style: italic;
+  margin-left: auto;
+}
+
+.standard .strand::after {
+  content: " Strand";
+}
+
+.standard header {
+  display: flex;
+  justify-content: space-between;
+}
