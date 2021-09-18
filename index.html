@@ -80,6 +80,7 @@
   }
 
   async function fetchDataForNode(node, url) {
+    url = url.replace(/.html?/, "");
     console.log(url);
     let response = await fetch(
       `https://thinkle-iacs.github.io/web-design-portfolio/${url}`
