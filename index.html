@@ -23,20 +23,21 @@
       ul div {
         opacity: 1;
         color: #222;
-        transition: all 500ms;
+        transition: all 300ms;
         height: auto;
+        max-height: 1400px;
+        overflow: auto;
       }
-      .hideChildren ul {
-        opacity: 0;
-        height: 0;
+      .hideChildren ul,.hideChildren div {
+        opacity: 0;        
         overflow: hidden;
         pointer-events: none;
       }
-      .hideDescription div {
-        opacity: 0;
-        height: 0;
+      .hideDescription div {        
+        opacity: 0;        
         overflow: hidden;
         pointer-events: none;
+        max-height: 0;
       }
     </style>
   </head>
