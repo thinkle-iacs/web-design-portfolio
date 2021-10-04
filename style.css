@@ -41,13 +41,18 @@
 }
 
 .instruct {
-  font-style: italic;  
+  font-style: italic;
   padding: 1em;
-  font-size: small;  
+  font-size: small;
 }
 .instruct pre {
   background-color: #efefef;
   font-family: monospace;
   font-style: normal;
   font-size: x-small;
+}
+
+.standard p {
+  margin-bottom: 1em;
+  margin-top: 0;
 }
