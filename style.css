@@ -39,3 +39,15 @@
   display: flex;
   justify-content: space-between;
 }
+
+.instruct {
+  font-style: italic;  
+  padding: 1em;
+  font-size: small;  
+}
+.instruct pre {
+  background-color: #efefef;
+  font-family: monospace;
+  font-style: normal;
+  font-size: x-small;
+}
