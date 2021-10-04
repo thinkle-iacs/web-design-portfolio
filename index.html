@@ -28,13 +28,14 @@
         max-height: 1400px;
         overflow: auto;
       }
-      .hideChildren ul,.hideChildren div {
-        opacity: 0;        
+      .hideChildren ul,
+      .hideChildren div {
+        opacity: 0;
         overflow: hidden;
         pointer-events: none;
       }
-      .hideDescription div {        
-        opacity: 0;        
+      .hideDescription div {
+        opacity: 0;
         overflow: hidden;
         pointer-events: none;
         max-height: 0;
@@ -65,6 +66,8 @@
         continue;
       } else if (file.path.indexOf("ABOUT") > -1) {
         continue;
+      } else if (file.path[0] == ".") {
+        continue;
       } else {
         htmlString += `<li><a class="${file.type}" href="${
           file.path
@@ -88,7 +91,7 @@
     );
     if (response.status == 200) {
       let text = await response.text();
-      node.innerHTML = text;      
+      node.innerHTML = text;
     } else {
       SOURCE_URL =
         "https://github.com/thinkle-iacs/web-design-portfolio/tree/master";
@@ -120,21 +123,21 @@
             node.parentElement.classList.toggle("hideDescription");
           } else {
             let div = document.createElement("div");
-            let innerDiv = document.createElement("div")
-            div.append(innerDiv)
+            let innerDiv = document.createElement("div");
+            div.append(innerDiv);
             let howtoDiv = document.createElement("div");
-            howtoDiv.classList.add('instruct')
+            howtoDiv.classList.add("instruct");
             howtoDiv.innerHTML = `
               To insert into portfolio, use:
               <br>
               <pre>
               &lt;div 
                  class="descriptor"
-                 data-ref="${node.getAttribute('href').replace('.html','')}"
+                 data-ref="${node.getAttribute("href").replace(".html", "")}"
               &gt;&lt;/div&gt;
               </pre>
             `;
-            div.append(howtoDiv)
+            div.append(howtoDiv);
             node.parentElement.append(div);
             fetchDataForNode(innerDiv, node.getAttribute("href"));
           }
