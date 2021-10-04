@@ -86,7 +86,7 @@
     url = url.replace(/.html?/, "");
     console.log(url);
     let response = await fetch(
-      `https://thinkle-iacs.github.io/web-design-portfolio/${url}`
+      `https://thinkle-iacs.github.io/web-design-portfolio/${url}.html`
     );
     if (response.status == 200) {
       let text = await response.text();
