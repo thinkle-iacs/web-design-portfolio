@@ -56,7 +56,6 @@
       `https://api.github.com/repos/thinkle-iacs/web-design-portfolio/contents/${path}`
     );
     const data = await response.json();
-    console.log("Got data", data);
     let htmlString = "<ul>";
     for (let file of data) {
       if (file.path.indexOf("index") > -1) {
@@ -84,7 +83,6 @@
 
   async function fetchDataForNode(node, url) {
     url = url.replace(/.html?/, "");
-    console.log(url);
     let response = await fetch(
       `https://thinkle-iacs.github.io/web-design-portfolio/${url}.html`
     );
@@ -118,7 +116,6 @@
         } else {
           standardNode = node.parentElement.querySelector(".standard");
           if (standardNode) {
-            console.log("Already exists!");
             node.parentElement.classList.toggle("hideDescription");
           } else {
             let div = document.createElement("div");
